@@ -1,10 +1,11 @@
 ﻿using back_end.Models;
 using System;
+using System.ComponentModel.DataAnnotations;
 
-/// <summary>
-/// Summary description for Class1
-/// </summary>
+
 public class Meal
 {
+    [Key]
+    public int Id { get; set; }
 	public ICollection<Ingredient> Ingredients { get; set; }		
 }

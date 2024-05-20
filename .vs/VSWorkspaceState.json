@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\back-end",
+    "\\back-end\\Controllers",
+    "\\back-end\\Models"
   ],
+  "SelectedNode": "\\back-end\\Models\\Meal.cs",
   "PreviewInSolutionExplorer": false
 }

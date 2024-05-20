@@ -9,7 +9,7 @@ namespace back_end.Controllers
     public class MealController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> GetAllMeals()
+        public async Task<ActionResult<List<Meal>>> GetAllMeals()
         {
             var ingredientList = new List<Ingredient>
             {
