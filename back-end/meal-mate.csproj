@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>back_end</RootNamespace>
+    <RootNamespace>meal-mate</RootNamespace>
     <UserSecretsId>e30d5cc8-6aa1-4950-8bdd-64098f293491</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
