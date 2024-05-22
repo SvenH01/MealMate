@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "meal-mate", "meal-mate.csproj", "{9868FD8C-E3C3-4067-9F54-E83781E24BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.API", "Project.API\Project.API.csproj", "{FDB4C540-A4D3-4049-9FF1-4BC17EB2300D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Core", "Project.Core\Project.Core.csproj", "{7BE926E6-BAB9-45EA-99DD-00CB037C7BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9868FD8C-E3C3-4067-9F54-E83781E24BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9868FD8C-E3C3-4067-9F54-E83781E24BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9868FD8C-E3C3-4067-9F54-E83781E24BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9868FD8C-E3C3-4067-9F54-E83781E24BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB4C540-A4D3-4049-9FF1-4BC17EB2300D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB4C540-A4D3-4049-9FF1-4BC17EB2300D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB4C540-A4D3-4049-9FF1-4BC17EB2300D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB4C540-A4D3-4049-9FF1-4BC17EB2300D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE926E6-BAB9-45EA-99DD-00CB037C7BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE926E6-BAB9-45EA-99DD-00CB037C7BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE926E6-BAB9-45EA-99DD-00CB037C7BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE926E6-BAB9-45EA-99DD-00CB037C7BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

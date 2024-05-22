@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace back_end.Models
+namespace Project.Core.Models
 {
     public class Ingredient
     {
@@ -12,3 +12,4 @@ namespace back_end.Models
         public decimal Calories { get; set; }
     }
 }
+
