@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Project.Core.Models
+namespace Project.Core.Entities.General
 {
     public class Ingredient
     {

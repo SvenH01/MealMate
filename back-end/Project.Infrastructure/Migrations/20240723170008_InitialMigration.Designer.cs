@@ -2,40 +2,30 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using back_end.Data;
+using Project.Infrastructure.Data;
 
 #nullable disable
 
-namespace back_end.Migrations
+namespace Project.Infrastucture.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240723170008_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Meal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Meals");
-                });
-
-            modelBuilder.Entity("back_end.Models.Ingredient", b =>
+            modelBuilder.Entity("Project.Core.Models.Ingredient", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -60,14 +50,27 @@ namespace back_end.Migrations
                     b.ToTable("Ingredient");
                 });
 
-            modelBuilder.Entity("back_end.Models.Ingredient", b =>
+            modelBuilder.Entity("Project.Core.Models.Meal", b =>
                 {
-                    b.HasOne("Meal", null)
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Meals");
+                });
+
+            modelBuilder.Entity("Project.Core.Models.Ingredient", b =>
+                {
+                    b.HasOne("Project.Core.Models.Meal", null)
                         .WithMany("Ingredients")
                         .HasForeignKey("MealId");
                 });
 
-            modelBuilder.Entity("Meal", b =>
+            modelBuilder.Entity("Project.Core.Models.Meal", b =>
                 {
                     b.Navigation("Ingredients");
                 });
