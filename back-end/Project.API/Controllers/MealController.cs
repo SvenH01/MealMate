@@ -33,10 +33,11 @@ namespace Project.API.Controllers
         {
             if (ModelState.IsValid)
             {
+                await _mealService.Create(meal);
                 return Ok(await _mealService.Create(meal));
             }
 
-            Console.Out.Write("test");
+            
             return Ok();
         }
     }

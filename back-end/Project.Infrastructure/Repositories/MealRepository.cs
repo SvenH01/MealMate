@@ -16,6 +16,7 @@ namespace Project.Infrastructure.Repositories
         public async Task<Meal> Create(Meal meal)
         {
             await _dbContext.Set<Meal>().AddAsync(meal);
+            await _dbContext.SaveChangesAsync();
             return meal;
         }
     }
