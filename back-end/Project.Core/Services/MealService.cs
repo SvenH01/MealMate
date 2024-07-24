@@ -10,7 +10,7 @@ public class MealService: IMealService
     
     private readonly IMealRepository _mealRepository;
 
-    MealService(IMealRepository mealRepository)
+    public MealService(IMealRepository mealRepository)
     {
         _mealRepository = mealRepository;
     }

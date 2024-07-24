@@ -2,20 +2,21 @@ using Project.Core.Entities.General;
 using Project.Core.Interfaces.IRepositories;
 using Project.Infrastructure.Data;
 
-namespace Project.Infrastructure.Repositories;
-
-public class MealRepository: IMealRepository
+namespace Project.Infrastructure.Repositories
 {
-    protected readonly ApplicationDbContext _dbContext;
-    
-    MealRepository(ApplicationDbContext dbContext)
+    public class MealRepository : IMealRepository
     {
-        _dbContext = dbContext;
-    }
+        private readonly ApplicationDbContext _dbContext;
 
-    public async Task<Meal> Create(Meal meal)
-    {
-        await _dbContext.Set<Meal>().AddAsync(meal);
-        return meal;
+        public MealRepository(ApplicationDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        public async Task<Meal> Create(Meal meal)
+        {
+            await _dbContext.Set<Meal>().AddAsync(meal);
+            return meal;
+        }
     }
 }
